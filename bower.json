@@ -1,0 +1,18 @@
+{
+  "name": "wp-multiple-authors",
+  "description": "Create authors taxonomy that can be used to assign multiple authors to posts.",
+  "license": "GPLv3",
+  "authors": [
+    "misfist"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}

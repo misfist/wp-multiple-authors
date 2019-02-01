@@ -1,0 +1,20 @@
+{
+  "generator-plugin-wp": {
+    "name": "WP Multiple Authors",
+    "homepage": "https://github.com/misfist/wp-multiple-authors",
+    "description": "Create authors taxonomy that can be used to assign multiple authors to posts.",
+    "version": "0.1.0",
+    "author": "misfist",
+    "authoremail": "pea@misfist.com",
+    "authorurl": "https://patizialutz.tech",
+    "license": "GPLv3",
+    "slug": "wp-multiple-authors",
+    "classname": "WP_Multiple_Authors",
+    "mainclassname": "WP_Multiple_Authors",
+    "classprefix": "WPMA_",
+    "prefix": "wp_multiple_authors",
+    "year": 2019,
+    "currentVersionWP": "4.8.1",
+    "plugingenversion": "0.20.2"
+  }
+}

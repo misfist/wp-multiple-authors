@@ -1,0 +1,30 @@
+{
+	"name": "wp-multiple-authors",
+	"description": "Create authors taxonomy that can be used to assign multiple authors to posts.",
+	"keywords": ["wordpress", "plugin", "generator-plugin-wp"],
+	"homepage": "https://github.com/misfist/wp-multiple-authors",
+	"license": "GPLv3",
+	"authors": [
+	{
+		"name": "misfist",
+		"homepage": "https://patizialutz.tech"
+	}
+	],
+	"minimum-stability": "dev",
+	"type": "wordpress-plugin",
+	"autoload": {
+		"classmap": ["wp-multiple-authors.php", "includes/"],
+		"files": ["vendor/cmb2/init.php", "vendor/cmb-field-select2/cmb-field-select2.php"]
+	},
+	"require": {
+		"webdevstudios/taxonomy_core": "^0.2.4",
+		"cmb2/cmb2": "^2.5",
+		"composer/installers": "^1.6",
+		"WebDevStudios/CMB2-User-Select": "^0.2.3"
+	},
+	"extra": {
+		"installer-paths": {
+			"vendor/{$name}/": ["type:wordpress-plugin"]
+		}
+	}
+}
