@@ -41,7 +41,7 @@ class WPMA_Author extends Taxonomy_Core {
 	 *
 	 * @param  WP_Multiple_Authors $plugin Main plugin object.
 	 */
-	public function __construct( $plugin, $taxonomy = 'guest-author' ) {
+	public function __construct( $plugin, $taxonomy = 'guest_author' ) {
 		$this->plugin = $plugin;
 		$this->taxonomy = $taxonomy;
 		$this->post_types = apply_filters( 'wp_multiple_authors_post_types', get_post_types( array( 'public'   => true ), 'names' ) );
@@ -98,7 +98,7 @@ class WPMA_Author extends Taxonomy_Core {
 		$cmb_term->add_field( array(
 			'name' => esc_html__( 'Nickname', 'wp-multiple-authors' ),
 			'desc' => esc_html__( '', 'wp-multiple-authors' ),
-			'id'   => 'author_nickname',
+			'id'   => $prefix . 'nickname',
 			'type' => 'text',
 			'attributes'        => array(
 				'placeholder' 		=> __( 'Nickame', 'wp-multiple-authors' ),
@@ -108,7 +108,7 @@ class WPMA_Author extends Taxonomy_Core {
 		$cmb_term->add_field( array(
 			'name' => esc_html__( 'First Name', 'wp-multiple-authors' ),
 			'desc' => esc_html__( '', 'wp-multiple-authors' ),
-			'id'   => 'author_first_name',
+			'id'   => $prefix . 'first_name',
 			'type' => 'text',
 			'attributes'        => array(
 				'placeholder' 		=> __( 'First Name', 'wp-multiple-authors' ),
@@ -118,7 +118,7 @@ class WPMA_Author extends Taxonomy_Core {
 		$cmb_term->add_field( array(
 			'name' => esc_html__( 'Last Name', 'wp-multiple-authors' ),
 			'desc' => esc_html__( '', 'wp-multiple-authors' ),
-			'id'   => 'author_last_name',
+			'id'   => $prefix . 'last_name',
 			'type' => 'text',
 			'attributes'        => array(
 				'placeholder' 		=> __( 'Last Name', 'wp-multiple-authors' ),
@@ -128,7 +128,7 @@ class WPMA_Author extends Taxonomy_Core {
 		$cmb_term->add_field( array(
 			'name' => esc_html__( 'Email', 'wp-multiple-authors' ),
 			'desc' => esc_html__( '', 'wp-multiple-authors' ),
-			'id'   => 'author_email',
+			'id'   => $prefix . 'email',
 			'type' => 'text_email',
 			'attributes'        => array(
 				'placeholder' 		=> __( 'Email', 'wp-multiple-authors' ),
@@ -138,7 +138,7 @@ class WPMA_Author extends Taxonomy_Core {
 		$cmb_term->add_field( array(
 			'name' => esc_html__( 'Website', 'wp-multiple-authors' ),
 			'desc' => esc_html__( '', 'wp-multiple-authors' ),
-			'id'   => 'author_website',
+			'id'   => $prefix . 'website',
 			'type' => 'text_url',
 			'attributes'        => array(
 				'placeholder' 		=> __( 'Website', 'wp-multiple-authors' ),
@@ -147,7 +147,7 @@ class WPMA_Author extends Taxonomy_Core {
 
 		$cmb_term->add_field( array(
 			'name'  => esc_html__( 'User', 'wp-multiple-authors' ),
-			'id'    => 'author',
+			'id'    => $prefix . 'user',
 			'desc'  => esc_html__( 'Type the name of a user to associate with this author', 'wp-multiple-authors' ),
 			'type'  => 'user_select_text',
 			'options' => array(),
@@ -157,7 +157,7 @@ class WPMA_Author extends Taxonomy_Core {
 			$cmb_term->add_field( array(
 				'name' => esc_html__( 'Profile Picture', 'wp-multiple-authors' ),
 				'desc' => esc_html__( 'Add author picture (optional)', 'wp-multiple-authors' ),
-				'id'   => 'image',
+				'id'   => $prefix . 'image',
 				'type' => 'file',
 			) );
 		}
