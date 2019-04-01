@@ -69,6 +69,7 @@ node_modules
 
 ### Composer ###
 composer.phar
+vendor/composer/installers
 # vendor/composer/
 composer.lock
 
